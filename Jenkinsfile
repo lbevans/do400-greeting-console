@@ -21,6 +21,13 @@ pipeline{
             }
         }
 
-        // Add the Release stage here
+        stage('Release') {
+            steps {
+                sh '''
+                    oc project nusomg-greetings
+                    oc start-build greeting-console --folow --wait
+                '''
+            }
+        }
     }
 }
