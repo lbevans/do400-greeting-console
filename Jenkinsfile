@@ -25,7 +25,7 @@ pipeline{
             steps {
                 sh '''
                     oc project nusomg-greetings
-                    oc start-build greeting-console --folow --wait
+                    oc start-build greeting-console  --folow --wait
                 '''
             }
         }
